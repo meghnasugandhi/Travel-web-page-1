@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let arr=[5,1,4,2,8]
+        let n=arr.length
+        for(i=0;i<n-1;i++){
+            for(j=0;j<n-1;j++){
+                if(arr[j]>arr[j+1]){
+                    [arr[j],arr[j+1]]=[arr[j+1],arr[j]]                }
+            }
+        }
+        document.write(arr)
+    </Script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linear Search</title>
+</head>
+<body>
+  <script>
+    const arr = [10, 20, 30, 40, 50];
+    const target = 30;
+    let index = -1; // default if not found
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        index = i;
+        break; // no need to continue once we found it
+      }
+    }
+
+    document.write("Index of target is: " + index);
+  </script>
+</body>
+</html>
+ -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script> -->
+    <!--    /*  <--Given a sorted array of integers, write a function to find the index of a given target value.
+If the target is not found, return -1. */ -->
+
+
+<!-- 🧑‍💼 Interviewer (Frontend Role):
+"Let’s say you're building a client-side form that checks if a user's input is a palindrome (like 'madam' or 'racecar')
+ before submitting. Can you write a JavaScript function to verify this? Also, how would you optimize this check in terms 
+ of performance and memory?" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Checker</title>
+</head>
+<body>
+  <form id="myForm">
+    <label>name:
+      <input type="text" id="one" placeholder="Enter name">
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const input = document.getElementById("one");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop form from refreshing the page
+
+      const str = input.value.toLowerCase().replace(/[^a-z0-9]/g, ''); // clean and normalize
+      const reversed = str.split('').reverse().join('');
+
+      if (str === reversed) {
+        result.innerText = `"${input.value}" is a palindrome! ✅`;
+      } else {
+        result.innerText = `"${input.value}" is NOT a palindrome ❌`;
+      }
+    });
+  </script>
+</body>
+</html>
+
+ 

@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First Non-Repeating Character</title>
+</head>
+<body>
+  <script>
+    let str = "aabbsdfd";
+    let result = null;
+
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+
+      // Check if this character appears only once
+      if (str.indexOf(char) === str.lastIndexOf(char)) {
+        result = char;
+        break;
+      }
+    }
+
+
+    document.write("First non-repeating character: " + (result || "None"));
+  </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str1=prompt("enter str1");
+        let str2=prompt("enter str2")
+        function isAnagram(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let sortedStr1 = str1.split('').sort().join('');
+  let sortedStr2 = str2.split('').sort().join('');
+
+  return sortedStr1 === sortedStr2;
+}
+
+
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Longest Common Prefix</title>
+</head>
+<body>
+  <script>
+    let arr = ["flower", "flow", "flight"];
+
+    function longestCommonPrefix(strs) {
+      if (strs.length === 0) return "";
+
+      let prefix = strs[0];
+
+      for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0) {
+          prefix = prefix.slice(0, prefix.length - 1);
+          if (prefix === "") return "";
+        }
+      }
+
+      return prefix;
+    }
+
+    let result = longestCommonPrefix(arr);
+    document.write("Longest Common Prefix: " + result);  // Output: "fl"
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Most Frequent Character</title>
+</head>
+<body>
+  <script>
+    let str = "javascript";
+    let charCount = {};
+
+    // Count each character
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    let maxChar = "";
+    let maxCount = 0;
+
+    // Find the character with the highest count
+    for (let char in charCount) {
+      if (charCount[char] > maxCount) {
+        maxChar = char;
+        maxCount = charCount[char];
+      }
+    }
+
+    document.write("Most frequent character: " + maxChar);
+  </script>
+</body>
+</html>
+

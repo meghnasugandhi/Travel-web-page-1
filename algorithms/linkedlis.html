@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        
+        class LinkedList {
+  constructor() {
+    this.head = null; // Start of the list
+  }
+
+  // Add a value at the end
+  append(value) {
+    const newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+
+    current.next = newNode;
+  }
+
+  // Print all values
+  printList() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+}
+
+    </Script>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedList</title>
+</head>
+<body>
+  <script>
+    // Step 1: Create Node class
+    class Node {
+      constructor(value) {
+        this.value = value; // store the value
+        this.next = null;   // pointer to next node
+      }
+    }
+
+    // Step 2: Create LinkedList class
+    class LinkedList {
+      constructor() {
+        this.head = null; // start of the list
+      }
+
+      // Step 3: Append new node to the end
+      append(value) {
+        const newNode = new Node(value); // Create a new node
+
+        if (!this.head) {
+          // If list is empty, make new node the head
+          this.head = newNode;
+          return;
+        }
+
+        // If list is not empty, traverse to the end
+        let current = this.head;
+        while (current.next) {
+          current = current.next;
+        }
+
+        // Attach new node at the end
+        current.next = newNode;
+      }
+
+      // Step 4: Print all node values
+      printList() {
+        let current = this.head;
+        while (current) {
+          console.log(current.value);
+          current = current.next;
+        }
+      }
+    }
+
+    // Step 5: Use the LinkedList
+    const list = new LinkedList();
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.printList();  // Output: 10, 20, 30
+
+  </script>
+</body>
+</html>

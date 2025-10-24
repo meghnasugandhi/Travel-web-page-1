@@ -1,0 +1,464 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Container for centering content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header/Navigation Styles */
+.navbar {
+  background-color: #3f51b5; /* A shade of blue */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #c5cae9; /* Lighter shade on hover */
+}
+
+.nav-user {
+  font-weight: bold;
+}
+
+/* Forms (Login/Signup) */
+.auth-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-form h2 {
+  color: #3f51b5;
+  margin-bottom: 25px;
+}
+
+.auth-form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #43a047;
+}
+
+.auth-form p {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.auth-form p a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.auth-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Art Generator Styles */
+.art-generator-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 30px; /* Space between controls and canvas */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 20px;
+}
+
+.controls-panel {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allows it to grow */
+  min-width: 300px; /* Minimum width before wrapping */
+  max-width: 400px;
+}
+
+.controls-panel h2 {
+  color: #3f51b5;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 8px;
+  background: #ddd;
+  outline: none;
+  border-radius: 5px;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #3f51b5;
+  cursor: grab;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #3f51b5;
+  cursor: grab;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.control-group input[type="number"] {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.control-group .slider-value {
+  font-weight: bold;
+  color: #3f51b5;
+  margin-left: 10px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.control-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1; /* Equal width for buttons */
+}
+
+.control-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.generate-button {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.generate-button:hover {
+  background-color: #0056b3;
+}
+
+.mint-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.mint-button:hover {
+  background-color: #218838;
+}
+
+.canvas-container {
+  flex: 2; /* Allows it to take more space */
+  min-width: 300px; /* Minimum width */
+  max-width: 600px; /* Max width for canvas area */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Padding around the canvas */
+  /* Ensure a square aspect ratio if canvas is square */
+  aspect-ratio: 1 / 1;
+}
+
+/* p5.js canvas will be placed here */
+.p5-canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.p5-canvas-wrapper canvas {
+  display: block; /* Remove extra space below canvas */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Gallery and My Art Page Styles */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.art-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.art-card img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block;
+  cursor: pointer;
+}
+
+.art-info {
+  padding: 15px;
+}
+
+.art-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3f51b5;
+  font-size: 1.2em;
+}
+
+.art-info p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.like-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #f44336; /* Red heart */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.like-button:hover {
+  transform: scale(1.1);
+}
+
+.like-count {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Art Detail Page */
+.art-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.art-detail-container h2 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.art-detail-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.art-detail-info {
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+.art-detail-info p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.art-detail-info strong {
+  color: #333;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #6c757d; /* Grey */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .art-generator-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls-panel, .canvas-container {
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .art-detail-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .nav-links li a {
+    font-size: 0.9em;
+  }
+
+  .auth-form {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .art-card img {
+    height: 200px;
+  }
+}
